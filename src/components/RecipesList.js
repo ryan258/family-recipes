@@ -1,6 +1,7 @@
 import React from "react"
 import { Link } from "gatsby"
 import { GatsbyImage, getImage } from "gatsby-plugin-image"
+import slugify from "slugify"
 
 // so we're getting that recipes through props of the 4 recipe nodes
 const RecipesList = ({ recipes = [] }) => {
@@ -10,9 +11,12 @@ const RecipesList = ({ recipes = [] }) => {
         // console.log(recipe) */
         const { id, title, image, prepTime, cookTime } = recipe
         const pathToImage = getImage(image)
+        const slug = slugify(title, {
+          lower: true,
+        })
 
         return (
-          <Link key={id} to={`/${title}`} className="recipe">
+          <Link key={id} to={`/${slug}`} className="recipe">
             <GatsbyImage
               // image={image.gatsbyImageData}
               image={pathToImage}
