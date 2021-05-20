@@ -3,6 +3,7 @@ import Layout from "../components/Layout"
 
 // import FetchData from "../examples/fetchData"
 import { StaticImage } from "gatsby-plugin-image"
+import AllRecipes from "../components/AllRecipes"
 
 export default function Home() {
   return (
@@ -15,7 +16,7 @@ export default function Home() {
             className="hero-img"
             placeholder="tracedSVG"
             layout="fullWidth"
-          />
+          ></StaticImage>
           <div className="hero-container">
             <div className="hero-text">
               <h1>family recipes</h1>
@@ -24,6 +25,7 @@ export default function Home() {
           </div>
         </header>
         {/* <FetchData /> */}
+        <AllRecipes />
       </main>
     </Layout>
   )
