@@ -1,4 +1,5 @@
 import React from "react"
+import Seo from "../components/Seo"
 import Layout from "../components/Layout"
 
 import { StaticImage } from "gatsby-plugin-image"
@@ -13,6 +14,11 @@ const About = ({
   // console.log(data)
   return (
     <Layout>
+      {/* here we can define the meta-title we want helmet to use */}
+      <Seo
+        title="About Page"
+        description="Isn't it ABOUT time you backed up your family's flavor?"
+      />
       <main className="page">
         <section className="about-page">
           <article>

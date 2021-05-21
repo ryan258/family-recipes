@@ -1,13 +1,17 @@
 import React from "react"
-import Layout from "../components/Layout"
-
-// import FetchData from "../examples/fetchData"
 import { StaticImage } from "gatsby-plugin-image"
+
+import Seo from "../components/Seo"
+import Layout from "../components/Layout"
 import AllRecipes from "../components/AllRecipes"
 
 export default function Home() {
   return (
     <Layout>
+      <Seo
+        title="Home Page"
+        description="This is the home page, your gateway to your family's recipes!"
+      />
       <main className="page">
         <header className="hero">
           <StaticImage
