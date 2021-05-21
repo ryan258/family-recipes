@@ -1,6 +1,8 @@
 import React from "react"
 import { graphql } from "gatsby"
 import RecipesList from "../components/RecipesList"
+
+import Seo from "../components/Seo"
 import Layout from "../components/Layout"
 // these are still pages so we can access all the props
 const TagTemplate = ({ data, pageContext }) => {
@@ -9,6 +11,10 @@ const TagTemplate = ({ data, pageContext }) => {
   const recipes = data.allContentfulRecipe.nodes
   return (
     <Layout>
+      <Seo
+        title={pageContext.tag}
+        description={`Congrats! You've found the secret stash of family ${pageContext.tag} recipes!`}
+      />
       <main className="page">
         <h2>{pageContext.tag}</h2>
         <div className="tag-recipes">

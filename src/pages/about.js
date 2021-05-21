@@ -16,7 +16,7 @@ const About = ({
     <Layout>
       {/* here we can define the meta-title we want helmet to use */}
       <Seo
-        title="About Page"
+        title="About"
         description="Isn't it ABOUT time you backed up your family's flavor?"
       />
       <main className="page">
